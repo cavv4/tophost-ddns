@@ -1,0 +1,10 @@
+{
+	"username": "username",
+	"password": "password",
+	"names": [
+		"@", "www"
+	],
+	"update_value_url": "https://ipinfo.io/ip",
+	"force_update": false,
+	"user_agent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36"
+}
