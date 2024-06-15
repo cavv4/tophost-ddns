@@ -21,12 +21,12 @@ def print_help():
 tophost-ddns script by Cavv
 	
 -h		Show this message
--u <username>	Control panel username
--p <password>	Control panel password
--n <name>	Name of the DNS record to update (use one argument per name E.g. -n @ -n www)
--v <value>	Manual update value (will use public ip by default)
+-u <username>	Set control panel username
+-p <password>	Set control panel password
+-n <name>	Set name of DNS record to update (use one argument per name E.g. -n @ -n www)
+-v <value>	Set update value (will use public ip by default)
 -f		Force update
--U <user_agent>	Custom user agent""")
+-U <user_agent>	Set custom user agent""")
 
 # Loads config from json file
 def load_config():
