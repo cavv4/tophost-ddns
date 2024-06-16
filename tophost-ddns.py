@@ -184,6 +184,8 @@ def update(names, value, s, force_update, user_agent):
 			print("[INFO] DNS record unchanged (" + name + ")")
 
 if __name__ == "__main__":
+	os.chdir(sys.path[0]) # Change working directory to script location
+	
 	config = load_config()
 	config = load_args(config)
 	
