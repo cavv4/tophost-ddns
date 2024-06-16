@@ -23,7 +23,7 @@ tophost-ddns script by Cavv
 -h		Show this message
 -u <username>	Set control panel username
 -p <password>	Set control panel password
--n <name>	Set name of DNS record to update (use one argument per name E.g. -n @ -n www)
+-n <name>	Set name of DNS record to update (use one argument per name E.g. -n "@" -n "www")
 -v <value>	Set update value (will use public ip by default)
 -f		Force update
 -U <user_agent>	Set custom user agent""")
