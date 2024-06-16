@@ -40,6 +40,11 @@ def load_config():
 
 # Loads arguments values in given config
 def load_args(config):
+	if "-n" in sys.argv:
+		# Remove already present names and append the argument ones
+		if config.get("names", []) or not "names" in config:
+			config["names"] = []
+			
 	i = 1
 	for arg in sys.argv[1:]: # Start from argument 1
 		# Bad syntax if argument uses next as value but next is known or there is none
@@ -59,9 +64,6 @@ def load_args(config):
 			config["password"] = sys.argv[i+1]
 		
 		if arg == "-n":
-			# Remove already present names and append the argument ones
-			if config.get("names", []) or not "names" in config:
-				config["names"] = []
 			config["names"].append(sys.argv[i+1])
 		
 		if arg == "-v":
