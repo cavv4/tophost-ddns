@@ -19,7 +19,7 @@ python3 -m pip install -r requirements.txt
 python3 tophost-ddns.py <arguments>
 ```
 Edit the `config.json` file with your configuration and/or use the arguments below
-### Arguments
+## Arguments
 | Option            | Parameter      | Use                                                                                 |
 |-------------------|----------------|-------------------------------------------------------------------------------------|
 | `-h` (help)       |                | Show help message                                                                   |
@@ -29,3 +29,13 @@ Edit the `config.json` file with your configuration and/or use the arguments bel
 | `-v` (value)      | `<value>`      | Set update value (will use public ip by default)                                    |
 | `-f` (force)      |                | Force update                                                                        |
 | `-U` (User agent) | `<user_agent>` | Custom user agent                                                                   |
+The arguments have priority over the `config.json` file
+
+### crontab example use
+- Edit crontab
+```
+crontab -e
+```
+```
+*/15 * * * * /usr/bin/python3 /path/to/script/tophost-ddns.py -u username -p password -n "@" -n "*" -n "www" > /path/to/log
+```
